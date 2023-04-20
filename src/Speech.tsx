@@ -15,10 +15,10 @@ const Speech = () => {
       uttr.lang = "ja-JP";
       uttr.pitch = pitch;
 
-      var voice = speechSynthesis.getVoices().find((voice) => {
+      /*var voice = speechSynthesis.getVoices().find((voice) => {
         return voice.name === "Google 日本語";
       });
-      if (voice) uttr.voice = voice;
+      if (voice) uttr.voice = voice;*/
 
       window.speechSynthesis.speak(uttr);
 
