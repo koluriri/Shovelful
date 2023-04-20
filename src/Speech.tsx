@@ -14,6 +14,12 @@ const Speech = () => {
       uttr.text = text;
       uttr.lang = "ja-JP";
       uttr.pitch = pitch;
+
+      var voice = speechSynthesis.getVoices().find((voice) => {
+        return voice.name === "Google 日本語";
+      });
+      if (voice) uttr.voice = voice;
+
       window.speechSynthesis.speak(uttr);
 
       setAnimationClass("animation show");
