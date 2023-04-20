@@ -15,7 +15,7 @@ const Home = () => {
       </nav>
       <div className="hero">
         <div className="illust">
-          <img src="/img/illust.svg" />
+          <img src="/img/illust.svg" alt="" />
         </div>
         <div className="copy">
           <h2>
@@ -39,16 +39,6 @@ const Home = () => {
         </div>
       </div>
       <footer>
-        <a
-          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-          className="twitter-share-button"
-          data-url="https://shovelful.vercel.app"
-          data-related="koluriri"
-          data-lang="ja"
-          data-show-count="false"
-        >
-          ツイート
-        </a>
         <p>
           つくったひと:{" "}
           <a href="//twitter.com/koluriri" target="_blank" rel="noreferrer">

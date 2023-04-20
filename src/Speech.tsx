@@ -71,7 +71,7 @@ const Speech = () => {
             </small>
           </div>
           <div className="right">
-            <img src="/icon/pitch_down.svg" />
+            <img src="/icon/pitch_down.svg" alt="" />
             <input
               type="range"
               min={0}
@@ -80,7 +80,7 @@ const Speech = () => {
               value={pitch}
               onChange={(e) => setPitch(Number(e.target.value))}
             />
-            <img src="/icon/pitch_up.svg" />
+            <img src="/icon/pitch_up.svg" alt="" />
           </div>
         </div>
       </div>
