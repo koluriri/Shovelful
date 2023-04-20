@@ -1,11 +1,40 @@
-body {
-  margin: 0;
-  padding: 250px 25px 0;
-  text-align:center;
-  font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-input {
-  font-size: 2em;
+:root {
+  --background: #17171C;
+  --text: #FFFFFF;
+  --secondary: #CAD5D3;
+  --primary: #D55C6C;
+  --placeholder: #6C6C81;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding:0;
+  background: var(--background);
   text-align: center;
+}
+
+body {
+  position: relative;
+  font-family: Poppins, 'BIZ UDPGothic', sans-serif;
+  font-feature-settings: 'palt';
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  opacity: 0.8;
+  color: var(--primary);
+}
+
+a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }

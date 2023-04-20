@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-function Speech() {
+const Speech = () => {
   const [text, setText] = useState("");
   const [pitch, setPitch] = useState(1);
 
-  const readAloud = () => {
+  const read = () => {
     if ("speechSynthesis" in window) {
       const uttr = new SpeechSynthesisUtterance();
       uttr.text = text;
@@ -13,7 +13,7 @@ function Speech() {
       window.speechSynthesis.speak(uttr);
 
       uttr.onend = () => {
-        alert("end");
+        console.log("end");
       };
 
       return;
@@ -27,7 +27,7 @@ function Speech() {
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      readAloud();
+      read();
       setTimeout(() => {
         setText("");
       }, 100);
@@ -64,6 +64,6 @@ function Speech() {
       </p>
     </>
   );
-}
+};
 
 export default Speech;

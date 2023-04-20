@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Speech from "./Speech";
 import Home from "./Home";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -12,6 +12,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
