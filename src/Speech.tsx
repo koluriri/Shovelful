@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { ReactComponent as Logo } from "./logo.svg";
+import { Link } from "react-router-dom";
 
 const Speech = () => {
   const [text, setText] = useState("");
   const [pitch, setPitch] = useState(1);
+
+  const [animationClass, setAnimationClass] = useState("animation");
 
   const read = () => {
     if ("speechSynthesis" in window) {
@@ -12,8 +16,10 @@ const Speech = () => {
       uttr.pitch = pitch;
       window.speechSynthesis.speak(uttr);
 
+      setAnimationClass("animation show");
+
       uttr.onend = () => {
-        console.log("end");
+        setAnimationClass("animation");
       };
 
       return;
@@ -36,32 +42,44 @@ const Speech = () => {
 
   return (
     <>
-      <h1>Shovelful</h1>
-      <p>
-        声の高さ
-        <input
-          type="range"
-          min={0}
-          max={2}
-          step={0.1}
-          value={pitch}
-          onChange={(e) => setPitch(Number(e.target.value))}
-        />
-      </p>
-      <input
-        type="text"
-        placeholder="入力…"
-        value={text}
-        onChange={handleChange}
-        onKeyDown={handleKeyDown}
-      />
-      <p>
-        音声を入力するとリアルタイムで話します。
-        <br />
-        ※エンターで発火
-        <br />
-        ※使えるブラウザが限られます
-      </p>
+      <div className="speech-container">
+        <div className="form-container">
+          <Link to={"/"}>
+            <Logo />
+          </Link>
+          <div className="input-wrapper">
+            <input
+              type="text"
+              placeholder="テキストを入力してEnter"
+              value={text}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
+              className="input"
+            />
+            <span className="border" />
+          </div>
+        </div>
+        <div className="shifter">
+          <img src="/icon/pitch_down.svg" />
+          <input
+            type="range"
+            min={0}
+            max={2}
+            step={0.1}
+            value={pitch}
+            onChange={(e) => setPitch(Number(e.target.value))}
+          />
+          <img src="/icon/pitch_up.svg" />
+        </div>
+      </div>
+      <div className={animationClass}>
+        <div className="bg-red atom" />
+        <div className="bg-green atom" />
+        <div className="bg-blue atom" />
+        <div className="bg-white atom" />
+        <div className="bg-yellow atom" />
+        <div className="bg-sky atom" />
+      </div>
     </>
   );
 };
