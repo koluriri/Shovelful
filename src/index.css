@@ -401,7 +401,7 @@ input[type=range]:active::-webkit-slider-thumb {
 
 @keyframes atom {
 	0% {
-    transform: translateY(300px);
+    transform: translateY(400px);
     opacity: 0;
 	}
 	40% {
@@ -409,7 +409,7 @@ input[type=range]:active::-webkit-slider-thumb {
     opacity: 1;
 	}
 	80% {
-    transform: translateY(300px);
+    transform: translateY(400px);
     opacity: 1;
 	}
   100% {
