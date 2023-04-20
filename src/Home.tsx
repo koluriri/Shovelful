@@ -24,7 +24,7 @@ const Home = () => {
             通話できる！
           </h2>
           <p className="lead">
-            操作はエンター（スマホの場合は改行）だけ。
+            必要な操作はタイピングとエンター（スマホの場合は改行）だけ。
             <br />
             <strong>リアルタイムな音声読み上げ</strong>により
             <br />
@@ -39,10 +39,22 @@ const Home = () => {
         </div>
       </div>
       <footer>
-        つくったひと:{" "}
-        <a href="//twitter.com/koluriri" target="_blank" rel="noreferrer">
-          @koluriri
+        <a
+          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+          className="twitter-share-button"
+          data-url="https://shovelful.vercel.app"
+          data-related="koluriri"
+          data-lang="ja"
+          data-show-count="false"
+        >
+          ツイート
         </a>
+        <p>
+          つくったひと:{" "}
+          <a href="//twitter.com/koluriri" target="_blank" rel="noreferrer">
+            @koluriri
+          </a>
+        </p>
       </footer>
     </>
   );

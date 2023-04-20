@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500;700&family=Poppins:wght@400;600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -23,7 +23,7 @@ body {
 
 body {
   position: relative;
-  font-family: Poppins, 'BIZ UDPGothic', sans-serif;
+  font-family: Poppins, 'IBM Plex Sans JP', sans-serif;
   font-feature-settings: 'palt';
   color: var(--text);
   line-height: 1.5;
@@ -70,21 +70,16 @@ img {
   max-height: 510px;
 }
 
-.illust img {
-  max-height: 510px;
-}
-
 h2 {
   font-size: 32px;
   margin: 0;
-  letter-spacing: 1px;
+  text-decoration: underline 7px var(--primary);
 }
 
 p.lead {
-  line-height: 1.75;
+  line-height: 1.6;
   color: var(--secondary);
-  font-size: 20px;
-  letter-spacing: 1px;
+  font-size: 18px;
   margin: 20px 0;
 }
 
@@ -93,50 +88,15 @@ strong {
 }
 
 small {
-  font-size: 14px;
-  color: var(--secondary);
-  letter-spacing: 0.5px;
-  display: block;
-}
-
-.copy {
-  text-align: left;
-}
-
-.illust img {
-  max-height: 510px;
-}
-
-h2 {
-  font-size: 32px;
-  margin: 0;
-  letter-spacing: 1px;
-}
-
-p.lead {
   line-height: 1.75;
-  color: var(--secondary);
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin: 20px 0;
-}
-
-strong {
-  color: var(--text);
-}
-
-small {
   font-size: 14px;
   color: var(--secondary);
-  letter-spacing: 0.5px;
   display: block;
 }
 
 .copy {
   text-align: left;
 }
-
-a {}
 
 .speech-btn {
   font-size: 24px;
@@ -159,6 +119,10 @@ footer {
   padding: 0 0 25px;
   font-size: 16px;
   color: var(--secondary);
+}
+
+footer p {
+  margin: 6px 0 0;
 }
 
 input[type=range] {
@@ -230,7 +194,7 @@ input[type=range]:active::-webkit-slider-thumb {
 }
 
 .form-container {
-  max-width: 95%;
+  max-width: 90%;
   width: 490px;
   display: grid;
   grid-template-columns: 45px 1fr;
@@ -243,13 +207,13 @@ input[type=range]:active::-webkit-slider-thumb {
   height: 100%;
   text-align: center;
   color: var(--text);
-  font-size: 26px;
+  font-size: 34px;
   padding: 0;
   border: 0;
   background: transparent;
   outline: 0;
   box-shadow: 0;
-  font-family: Poppins, 'BIZ UDPGothic', sans-serif;
+  font-family: Poppins, 'IBM Plex Sans JP', sans-serif;
 }
 
 .input-wrapper .border {
@@ -314,7 +278,7 @@ input[type=range]:active::-webkit-slider-thumb {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   max-width: 95%;
   width: 490px;
   margin-top: 15px;
@@ -415,4 +379,16 @@ input[type=range]:active::-webkit-slider-thumb {
   100% {
     opacity: 0;
   }
+}
+
+.shifter .left small {
+  text-align: left;
+  line-height: 1.5;
+  opacity: 0.7;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.shifter .left {
+  width: 60%;
 }
