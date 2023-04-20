@@ -368,7 +368,7 @@ input[type=range]:active::-webkit-slider-thumb {
   opacity: 1;
   bottom: -200px;
   border-radius: 50%;
-  filter: blur(200px);
+  filter: blur(180px);
 	animation: atom 3s ease-in-out infinite;
 }
 
@@ -399,15 +399,15 @@ input[type=range]:active::-webkit-slider-thumb {
 
 @keyframes atom {
 	0% {
-    transform: translateY(-200px);
+    transform: translateY(300px);
     opacity: 0;
 	}
 	40% {
-    transform: translateY(200px);
+    transform: translateY(-200px);
     opacity: 1;
 	}
 	80% {
-    transform: translateY(-200px);
+    transform: translateY(300px);
     opacity: 1;
 	}
   100% {
