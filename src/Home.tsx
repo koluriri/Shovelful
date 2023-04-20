@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "./logo.svg";
+import useTracking from "./useTracking";
 
 const Home = () => {
+  useTracking();
+
   return (
     <>
       <nav>

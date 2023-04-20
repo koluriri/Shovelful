@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { ReactComponent as Logo } from "./logo.svg";
 import { Link } from "react-router-dom";
+import useTracking from "./useTracking";
 
 const Speech = () => {
+  useTracking();
+
   const [text, setText] = useState("");
   const [pitch, setPitch] = useState(1);
 

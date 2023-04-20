@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 import Speech from "./Speech";
 import Home from "./Home";
+import useTracking from "./useTracking";
 
 const App = () => {
   return (
