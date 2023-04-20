@@ -249,6 +249,7 @@ input[type=range]:active::-webkit-slider-thumb {
   background: transparent;
   outline: 0;
   box-shadow: 0;
+  font-family: Poppins, 'BIZ UDPGothic', sans-serif;
 }
 
 .input-wrapper .border {
